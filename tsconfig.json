@@ -1,0 +1,26 @@
+{
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "compileOnSave": true,
+  "buildOnSave": true,
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "jsx": "react"
+  },
+  "filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**"
+  ],
+  "files": [
+    "typings/globals/react-dom/index.d.ts",
+    "typings/globals/react/index.d.ts",
+    "typings/index.d.ts",
+    "components/Hello.tsx",
+    "index.tsx"
+  ]
+}
