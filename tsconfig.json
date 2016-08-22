@@ -5,8 +5,8 @@
   "compileOnSave": true,
   "buildOnSave": true,
   "compilerOptions": {
-    "target": "es6",
-    "module": "es6",
+    "target": "es5",
+    "module": "commonjs",
     "sourceMap": true,
     "noImplicitAny": true,
     "jsx": "react"
