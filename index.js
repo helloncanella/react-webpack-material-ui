@@ -1,3 +1,4 @@
+import * as React from 'react';
 import * as ReactDOM from 'react-dom'
 import { Routes } from './components/Routes/Routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
