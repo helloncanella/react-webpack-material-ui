@@ -1,0 +1,21 @@
+{
+  "name": "react-webpack",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Hellon Canella <helloncanella@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.6.3"
+  }
+}
