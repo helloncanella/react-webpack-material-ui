@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./index.tsx",
+  entry: "./index.js",
   output: {
     path: __dirname,
     filename: "bundle.js",
@@ -8,14 +8,18 @@ module.exports = {
 
   devtool: "source-map",
 
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
-  },
+  // externals: {
+  //   "react": "React",
+  //   "react-dom": "ReactDOM"
+  // },
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+    extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+    // alias: {
+    //   'react-dom': path.resolve('./node_modules/react-dom'),
+    //   'react': path.resolve('./node_modules/react'),
+    // }
   },
 
 
@@ -27,7 +31,8 @@ module.exports = {
         loader: "babel",
         include: __dirname,
         query: {
-          presets: ['es2015', 'react', 'react-hmre']
+          // presets: ['es2015', 'react', 'react-hmre']
+          presets: ['es2015', 'react']
         }
       },
 
