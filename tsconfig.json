@@ -25,7 +25,7 @@
     "typings/globals/react/index.d.ts",
     "typings/index.d.ts",
     "components/Admin/Admin.tsx",
-    "components/App.tsx",
+    "components/App/App.tsx",
     "components/Client/Client.tsx",
     "components/Instructor/Instructor.tsx",
     "components/Login/Login.tsx",

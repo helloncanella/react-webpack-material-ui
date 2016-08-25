@@ -8,18 +8,10 @@ module.exports = {
 
   devtool: "source-map",
 
-  // externals: {
-  //   "react": "React",
-  //   "react-dom": "ReactDOM"
-  // },
-
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
-    // alias: {
-    //   'react-dom': path.resolve('./node_modules/react-dom'),
-    //   'react': path.resolve('./node_modules/react'),
-    // }
+    extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".css", ".scss"],
+ 
   },
 
 
@@ -37,9 +29,7 @@ module.exports = {
       },
 
       {
-        // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
         test: /\.tsx?$/,
-        // loader: "ts-loader"
         loaders:['ts-loader']
       }
 

@@ -1,6 +1,6 @@
 import {Router, Route, browserHistory} from 'react-router';
 import * as React from 'react'; 
-import App from '../App';
+import App from '../App/App';
 import Client from '../Client/Client';
 import Login from '../Login/Login';
 
@@ -11,8 +11,7 @@ export const Routes = () => (
     <Route path="/" component={App}>
 
       <Route path="login" component={Login}></Route>
-    
-    
+        
       // <Route path="client" component={Client}>
 
       // </Route>
