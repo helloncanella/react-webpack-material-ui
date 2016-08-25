@@ -1,16 +1,17 @@
-import * as React from 'react';
-import DatePicker from 'material-ui/DatePicker';
+import Admin from './Admin/Admin'
+import Client from './Client/Client'
+import Instructor from './Instructor/Instructor'
+import * as React from 'react'
 
-/**
- * The Date Picker defaults to a portrait dialog. The `mode` property can be set to `landscape`.
- * You can also disable the Dialog passing `true` to the `disabled` property.
- */
-const DatePickerExampleSimple = () => (
-  <div>
-    <DatePicker hintText="Portrait Dialog" />
-    <DatePicker hintText="pi" mode="landscape" />
-    <DatePicker hintText="Dialog Disabled" disabled={true} />
-  </div>
-);
+export default class App extends React.Component<{},{}> {
+  render(){    
 
-export default DatePickerExampleSimple; 
+    return (
+      <div>
+        <h2>{this.props.children}</h2>
+      </div>
+    ) 
+    
+    
+  }
+}
