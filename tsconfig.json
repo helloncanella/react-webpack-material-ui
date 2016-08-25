@@ -2,8 +2,8 @@
   "atom": {
     "rewriteTsconfig": true
   },
-  "compileOnSave": true,
-  "buildOnSave": true,
+  "compileOnSave": false,
+  "buildOnSave": false,
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
@@ -17,10 +17,12 @@
     "!node_modules/**"
   ],
   "files": [
+    "typings/globals/material-ui/index.d.ts",
     "typings/globals/react-dom/index.d.ts",
+    "typings/globals/react-tap-event-plugin/index.d.ts",
     "typings/globals/react/index.d.ts",
     "typings/index.d.ts",
-    "components/Hello.tsx",
-    "index.tsx"
+    "components/App.tsx",
+    "components/Hello.tsx"
   ]
 }
