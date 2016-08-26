@@ -2,8 +2,6 @@ import * as React from 'react'
 import AppBar from 'material-ui/AppBar'
 import LoginButton from '../LoginButton/LoginButton'
 
-
-
 import './Login.scss'
 
 export default class Login extends React.Component<{},{}>{
@@ -16,8 +14,8 @@ export default class Login extends React.Component<{},{}>{
                 />
 
                 <div className="grid loginContainer">
-                    <LoginButton service="facebook" href="/new"></LoginButton>
-                    <LoginButton service="google" href="/new" ></LoginButton>
+                    <LoginButton service="facebook" href="/newUser"></LoginButton>
+                    <LoginButton service="google" href="/newUser" ></LoginButton>
                 </div>
 
             </div>

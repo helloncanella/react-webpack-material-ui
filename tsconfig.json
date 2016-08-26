@@ -8,27 +8,21 @@
     "target": "es5",
     "module": "commonjs",
     "sourceMap": true,
-    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
     "jsx": "react"
-  },
-  "filesGlob": [
-    "**/*.ts",
-    "**/*.tsx",
-    "!node_modules/**"
-  ],
+  },  
   "files": [
-    "typings/globals/material-ui/index.d.ts",
-    "typings/globals/react-dom/index.d.ts",
-    "typings/globals/react-router/history/index.d.ts",
-    "typings/globals/react-router/index.d.ts",
-    "typings/globals/react-tap-event-plugin/index.d.ts",
-    "typings/globals/react/index.d.ts",
     "typings/index.d.ts",
     "components/Admin/Admin.tsx",
     "components/App/App.tsx",
-    "components/Client/Client.tsx",
-    "components/Instructor/Instructor.tsx",
+    "components/ClientComponent/ClientComponent.tsx",
+    "components/Home/Home.tsx",
+    "components/InstructorsList/instructorsData.ts",
+    "components/InstructorsList/InstructorsList.tsx",    
     "components/Login/Login.tsx",
+    "components/LoginButton/LoginButton.tsx",
+    "components/NewUser/NewUser.tsx",
     "components/Routes/Routes.tsx"
   ]
 }

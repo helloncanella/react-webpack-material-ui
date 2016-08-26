@@ -11,7 +11,7 @@ module.exports = {
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
     extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".css", ".scss"],
- 
+
   },
 
 
@@ -30,7 +30,7 @@ module.exports = {
 
       {
         test: /\.tsx?$/,
-        loaders:['ts-loader']
+        loaders: ['ts-loader']
       },
 
       {
@@ -40,7 +40,32 @@ module.exports = {
 
       {
         test: /\.css$/,
-        loaders: ["style", "css"]
+        loader: 'style!css?sourceMap'
+      },
+
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/font-woff"
+      },
+
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/font-woff"
+      },
+
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      },
+
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      },
+      
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=image/svg+xml"
       }
 
 
@@ -51,5 +76,5 @@ module.exports = {
       { test: /\.js$/, loader: "source-map-loader" }
     ]
   },
-  
+
 }
