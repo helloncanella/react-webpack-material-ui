@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { AppBar, FontIcon, IconButton, Avatar, FlatButton } from 'material-ui'
-import {browserHistory} from 'react-router'
+import { FontIcon, Avatar, FlatButton } from 'material-ui'
+import {browserHistory, Link} from 'react-router'
 import instructorsData from '../fakedData/instructorsData'
+
 
 export interface InstructorState {
     name: string,
@@ -13,13 +14,7 @@ export interface InstructorState {
 }
 
 
-export default class InstructorDetails extends React.Component<{}, InstructorState>{
-
-    _backHistory() {
-        browserHistory.push('/client/01/home')
-    }
-
-
+export default class InstructorDetails extends React.Component<any, InstructorState>{
     render() {
         let instructor = instructorsData[0]
 
@@ -35,6 +30,7 @@ export default class InstructorDetails extends React.Component<{}, InstructorSta
             subjects = professional.subjects,
             personalDescription = professional.personalDescription
 
+
         let
             recentEducation = _.maxBy(professional.education, 'end'),
             lastDegree = recentEducation.degree,
@@ -43,15 +39,7 @@ export default class InstructorDetails extends React.Component<{}, InstructorSta
 
 
         return (
-            <div className="instructorDetails">
-                <AppBar
-                    title="Detalhes"
-                    iconElementLeft={
-                        <IconButton onTouchTap={this._backHistory}>
-                            <FontIcon className="fa fa-arrow-left"></FontIcon>
-                        </IconButton>
-                    }
-                    ></AppBar>
+            <div className="instructorDetails">                
                 <div className="body grid">
                     <div className="introduction">
                         <Avatar src={image} size={130}/>
@@ -63,19 +51,23 @@ export default class InstructorDetails extends React.Component<{}, InstructorSta
                     <div className="subjects">
                         <h3>Ensina</h3>
                         <ul>
-                            {subjects.map((item)=>{
-                                return <li> <span className="fa fa-graduation-cap"></span> {item} </li>
+                            {subjects.map((item, index)=>{
+                                return <li key={index}> <span className="fa fa-graduation-cap"></span> {item} </li>
                             })}
                         </ul>
 
                     </div>
                     <div className="plans">
                         <h3>Pacotes e valores</h3>
-                        {plans.map((plan)=>{
+                        {plans.map((plan, index)=>{
+                            let duration = 2 //stub    
+
                             return (
-                                <div className="description">
+                                <div key={index} className="description">
                                     <h4>{plan.description}</h4>
-                                    <p>{plan.details}</p> 
+                                    <h5>Aula com {duration} horas</h5>
+                                    <Link to={`/client/${this.props.params.id}/instructorDetails/${this.props.params.instructorId}/plan/01`}>detalhes</Link>
+                                    <p>{plan.details}</p>
                                 </div>
                             )
                         })}
@@ -83,6 +75,24 @@ export default class InstructorDetails extends React.Component<{}, InstructorSta
                     <div className="personalDescription">
                         <h3>Descrição Pessoal</h3>
                         <p>{professional.personalDescription}</p>
+                    </div>
+                    <div className="education">
+                        <h3>Education</h3>
+                        {education.map((item, index)=>{
+                            let 
+                                degree = item.degree,
+                                university = item.university,
+                                start = item.start,
+                                area = item.area,
+                                end = item.end
+
+                            return(
+                                <div key={index} className="item">
+                                    <h4>{degree} em {area} - {university}</h4>
+                                    <p>{start} - {end}</p>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

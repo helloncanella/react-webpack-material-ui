@@ -85,9 +85,12 @@ interface Instructor {
     ],
     plans: [
         {
+            id: string,  
             price: string,
             description: string
             details: string
+            duration: number //duration in hours
+            important?: string
         }
     ],
     invoices?: {

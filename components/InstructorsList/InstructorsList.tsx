@@ -4,7 +4,7 @@ import {List, ListItem, Avatar} from 'material-ui'
 import * as _ from 'lodash'
 import { Link } from 'react-router'
 
-export default class InstructorList extends React.Component<{},{}> {
+export default class InstructorList extends React.Component<any,{}> {
   
     _renderedData(){
       var DOM = instructorsData.map((instructor)=>{
@@ -24,7 +24,7 @@ export default class InstructorList extends React.Component<{},{}> {
 
           
           return (
-            <Link to={`client/01/instructorDetails/${instructorKey}`}>
+            <Link to={`/client/01/instructorDetails/${instructorKey}`}>
               <ListItem 
                 key = {instructorKey}
                 leftAvatar={<Avatar src={image}></Avatar>}

@@ -24,6 +24,8 @@
     "components/Login/Login.tsx",
     "components/LoginButton/LoginButton.tsx",
     "components/NewUser/NewUser.tsx",
-    "components/Routes/Routes.tsx"
+    "components/Routes/Routes.tsx",
+    "components/HeaderBackBar/HeaderBackBar.tsx",
+    "components/PlanDetails/PlanDetails.tsx"
   ]
 }

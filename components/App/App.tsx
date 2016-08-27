@@ -13,16 +13,12 @@ import './App.scss'
 
 export default class App extends React.Component<{},{}> {
   render(){
-
     return (
-
         <MuiThemeProvider>
           <div className="app">
             {this.props.children}
           </div>
         </MuiThemeProvider>
-
     )
-
   }
 }
