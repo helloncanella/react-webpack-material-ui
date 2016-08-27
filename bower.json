@@ -1,13 +1,23 @@
 {
-  "name": "react-webpack",
-  "description": "",
-  "main": "index.js",
+  "name": "react-hot-boilerplate",
+  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "main": "",
   "authors": [
-    "Hellon Canella <helloncanella@gmail.com>"
+    "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)"
   ],
-  "license": "ISC",
-  "moduleType": [],
-  "homepage": "",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,6 +26,6 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.6.3"
+    "font-awesome": "^4.6.3"
   }
 }

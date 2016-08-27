@@ -1,36 +1,27 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
-  entry: "./index.js",
+  devtool: 'eval',
+  entry: [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src/index'
+  ],
   output: {
-    path: __dirname,
-    filename: "bundle.js",
-    publicPath: "/static/"
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
   },
-
-  devtool: "source-map",
-
-  resolve: {
-    // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".css", ".scss"],
-
-  },
-
-
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel",
-        include: __dirname,
-        query: {
-          // presets: ['es2015', 'react', 'react-hmre']
-          presets: ['es2015', 'react']
-        }
-      },
-
-      {
-        test: /\.tsx?$/,
-        loaders: ['ts-loader']
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'src')
       },
 
       {
@@ -62,19 +53,12 @@ module.exports = {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file"
       },
-      
+
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url?limit=10000&mimetype=image/svg+xml"
       }
 
-
-
-    ],
-    preLoaders: [
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      { test: /\.js$/, loader: "source-map-loader" }
     ]
-  },
-
-}
+  }
+};
