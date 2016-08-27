@@ -5,6 +5,7 @@ import ClientComponent from '../ClientComponent/ClientComponent'
 import Login from '../Login/Login'
 import NewUser from '../NewUser/NewUser'
 import Home from '../Home/Home'
+import InstructorDetails from '../InstructorDetails/InstructorDetails'
 
 export const Routes = () => (
   <Router history={browserHistory}>
@@ -13,6 +14,7 @@ export const Routes = () => (
       <Route path="newUser" component={NewUser}></Route>
       <Route path="client/:id" >
         <Route path="home" component={Home}></Route>
+        <Route path="instructorDetails/:instructorId" component={InstructorDetails}></Route>
       </Route>
     </Route>
   </Router>

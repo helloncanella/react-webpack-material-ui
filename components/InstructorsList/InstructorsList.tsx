@@ -1,8 +1,8 @@
 import * as React from 'react'
-import  instructorsData from './instructorsData'
+import  instructorsData from '../fakedData/instructorsData'
 import {List, ListItem, Avatar} from 'material-ui'
 import * as _ from 'lodash'
-
+import { Link } from 'react-router'
 
 export default class InstructorList extends React.Component<{},{}> {
   
@@ -16,7 +16,7 @@ export default class InstructorList extends React.Component<{},{}> {
 
         let 
           professional = instructor.professionalData,
-          key = instructor.professionalData._id,
+          instructorKey = instructor.professionalData._id,
           recentEducation = _.maxBy(professional.education, 'end'),
           lastDegree = recentEducation.degree,
           lastUniversity = recentEducation.university,
@@ -24,18 +24,20 @@ export default class InstructorList extends React.Component<{},{}> {
 
           
           return (
-            <ListItem 
-              key = {key}
-              leftAvatar={<Avatar src={image}></Avatar>}
-              primaryText={name}
-              secondaryText = {
-                <p>
-                  {lastDegree} pela {lastUniversity}<br />
-                  a partir de {chepeastPrice}  
-                </p>                
-              }
-              secondaryTextLines={2}
-            />
+            <Link to={`client/01/instructorDetails/${instructorKey}`}>
+              <ListItem 
+                key = {instructorKey}
+                leftAvatar={<Avatar src={image}></Avatar>}
+                primaryText={name}
+                secondaryText = {
+                  <p>
+                    {lastDegree} - {lastUniversity}<br />
+                    a partir de {chepeastPrice}  
+                  </p>                
+                }
+                secondaryTextLines={2}
+              />
+            </Link>
           )
       })
 
@@ -43,8 +45,6 @@ export default class InstructorList extends React.Component<{},{}> {
     }
   
     render(){
-
-        console.log(this._renderedData())
         return <List>{this._renderedData()}</List> 
     }
 }
