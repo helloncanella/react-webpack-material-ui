@@ -1,0 +1,52 @@
+.allMessages{
+    &::after{
+        display:block;
+        clear: both;
+        content: '';
+    }
+}
+
+.messageContainer {
+    width: 100%;
+    
+    margin-bottom: 20px;
+
+
+    &::after{
+        display:block;
+        clear: both;
+        content: '';
+    }
+    
+    &.left{
+        &, &>*{
+            float: left;
+        }
+
+        .avatar{
+            margin-right: 10px;
+        }
+    }
+
+    &.right{
+        &, &>*{
+            float: right;
+        }
+
+        .avatar{
+            margin-left: 10px;
+        }
+    }
+
+
+    .messages{
+        width: 60%;
+        max-width: 300px;
+        line-height: 1.45;
+        .paper{
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+    } 
+
+}

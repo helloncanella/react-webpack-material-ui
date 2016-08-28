@@ -1,6 +1,8 @@
 import * as React from 'react'
 import {Tabs, Tab, FontIcon, AppBar} from 'material-ui'
 import InstructorsList from '../InstructorsList/InstructorsList';
+import ChatList from '../ChatList/ChatList'
+import ContactsList from '../ContactsList/ContactsList'
 
 export default class Home extends React.Component {
     render(){
@@ -14,14 +16,16 @@ export default class Home extends React.Component {
                                 <InstructorsList></InstructorsList>
                             </Tab>
                             <Tab label="favoritos">
-                                
+                                <InstructorsList></InstructorsList>
                             </Tab>
                         </Tabs>
                     </Tab>
                     <Tab icon={<FontIcon className="fa fa-comment"></FontIcon>}>
                         <Tabs>
-                            <Tab label="recentes"></Tab>
-                            <Tab label="todos"></Tab>
+                            <Tab label="recentes"><ChatList /></Tab>
+                            <Tab label="todos">
+                                <ContactsList />
+                            </Tab>
                         </Tabs>
                     </Tab>
                     <Tab icon={<FontIcon className="fa fa-calendar-o"></FontIcon>}>

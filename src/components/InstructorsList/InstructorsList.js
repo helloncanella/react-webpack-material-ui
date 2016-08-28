@@ -1,6 +1,6 @@
 import * as React from 'react'
 import  instructorsData from '../fakedData/instructorsData'
-import {List, ListItem, Avatar} from 'material-ui'
+import {List, ListItem, Avatar, Divider} from 'material-ui'
 import * as _ from 'lodash'
 import { Link } from 'react-router'
 
@@ -38,6 +38,7 @@ export default class InstructorList extends React.Component{
                 }
                 secondaryTextLines={2}
               />
+              <Divider />
             </Link>
           )
       })

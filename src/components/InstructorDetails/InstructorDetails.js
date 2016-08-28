@@ -51,12 +51,19 @@ export default class InstructorDetails extends React.Component{
                     <div className="plans">
                         <h3>Pacotes e valores</h3>
                         {plans.map((plan, index)=>{
-                            let duration = 2 //stub    
-
+                            let 
+                                description = plan.description
+                                , durationEachClass = plan.durationEachClass
+                                , numberOfClasses = plan.numberOfClasses
+                                , price = plan.price
+                                , details = plan.details
+                                , observations = plan.observations //stub    
+                                , hourRate = (price/(numberOfClasses*durationEachClass)).toFixed(2) 
                             return (
                                 <div key={index} className="description">
                                     <h4>{plan.description}</h4>
-                                    <h5>Aula com {duration} horas</h5>
+                                    <p>{numberOfClasses} aulas com {durationEachClass} horas por R$ {price}</p>
+                                    <h5>R$ {hourRate} por hora</h5>
                                     <Link to={`/client/${this.props.params.id}/instructorDetails/${this.props.params.instructorId}/plan/01`}>detalhes</Link>
                                     <p>{plan.details}</p>
                                 </div>

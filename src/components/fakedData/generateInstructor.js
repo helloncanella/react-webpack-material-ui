@@ -58,24 +58,34 @@ export function generateInstructor(quantity) {
                 }
             ],
             plans: [
-                {
+                {   
+                    numberOfClasses: Math.floor(Math.random()*9),
+                    durationEachClass: 1 + Math.floor(Math.random()*3),
                     price: faker.commerce.price(),
                     description: faker.lorem.words(4),
-                    details: faker.lorem.words(40)
+                    details: faker.lorem.words(20),
+                    observations: faker.lorem.words(40)
                 },
                 {
+                    numberOfClasses: Math.floor(Math.random()*9),
+                    durationEachClass: 1 + Math.floor(Math.random()*3),    
                     price: faker.commerce.price(),
                     description: faker.lorem.words(4),
-                    details: faker.lorem.words(40)
+                    details: faker.lorem.words(20),
+                    observations: faker.lorem.words(40)
                 },
                 {
+                    numberOfClasses: Math.floor(Math.random()*9),
+                    durationEachClass: 1 + Math.floor(Math.random()*3),    
                     price: faker.commerce.price(),
                     description: faker.lorem.words(4),
-                    details: faker.lorem.words(40)
+                    details: faker.lorem.words(20),
+                    observations: faker.lorem.words(40)
                 }
             ],
             subjects: ['Cálculo', 'Física'],
-            personalDescription: faker.lorem.words(40)
+            personalDescription: faker.lorem.words(20),
+            observations: faker.lorem.words(40)
 
         
 

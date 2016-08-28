@@ -7,13 +7,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Routes from './components/Routes/Routes';
-import Oi  from './components/Oi';
-import Lero from './components/Lero';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {generateInstructor} from './components/fakedData/generateInstructor'
+import {generateMessages} from './components/fakedData/generateMessages'
 
 window.generateData = generateInstructor
-
+window.generateMessages = generateMessages
 
 injectTapEventPlugin();
 
