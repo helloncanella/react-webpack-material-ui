@@ -26,15 +26,13 @@ export default class MeetingCard extends React.Component {
 
         let cardImage = imagesMap[subject.toLowerCase()]
 
-        return (
-           
+        return (           
             <Paper className="meetingCard">
                 <img src={cardImage} />
                 <Divider />
                 <div className="body grid">
                     <div><b>{week}, {day}</b></div>
                     <div> {startHour} - {endHour} h </div>
-                    <div>{address}</div>
                     <Link to="#"><b>detalhes</b></Link>
                 </div>
             </Paper>

@@ -1,0 +1,40 @@
+.cardContainer {
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+    .header, .cards{
+
+        position: relative;
+
+        &::after{
+            clear: both;
+            content: '';
+            display: block;
+
+        }
+
+        &>*{
+            float: left
+        }
+
+    }
+
+
+    .header{
+        margin-bottom:1rem;
+
+        .avatar{
+            margin-right: 10px;
+        }
+
+        .name{
+            margin:0;
+            padding-top: 8px;
+            padding-bottom: 10px;
+            color: #333;
+        }
+    
+    }
+
+}

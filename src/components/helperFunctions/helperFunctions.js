@@ -26,12 +26,12 @@ export var parseDate = (stringDate) => {
     let locale = 'pt-BR'
 
     //removing double quotes    
-    stringDate = stringDate.replace("\"", "")
+    stringDate = stringDate.replace(/\"/g,"")
 
     var momentWrapper = moment(stringDate).locale(locale)
 
     return {
-        week: momentWrapper.format('dd'),
+        week: momentWrapper.format('ddd'),
         day: momentWrapper.format('DD/MM'),
         hour: momentWrapper.format('HH:mm')
     } 

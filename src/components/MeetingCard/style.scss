@@ -1,19 +1,32 @@
 .meetingCard{
+   
+   $margin-right:4;
 
-    width: 50%;
+   
+    width: (100-$margin-right)/2*1%;
     margin-bottom: 20px;
     line-height: 1.6;
     font-size: 0.9em;
+    color: #333;
+
+    &:nth-child(2n){
+        margin-left: $margin-right*1%
+    }
 
     img{
         width: 100%;
     }
 
+    a{
+        color: inherit
+    }
 
     .address{
         font-size: 0.75em;
     }
+
     .body{
         text-align: center;
     }
+
 }
