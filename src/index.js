@@ -10,12 +10,13 @@ import Routes from './components/Routes/Routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {generateInstructor} from './components/fakedData/generateInstructor'
 import {generateMessages} from './components/fakedData/generateMessages'
+import generateMeetings from './components/fakedData/generateMeetings'
 
 window.generateData = generateInstructor
 window.generateMessages = generateMessages
+window.generateMeetings = generateMeetings
 
 injectTapEventPlugin();
-
 
 ReactDOM.render(
   <Routes />,

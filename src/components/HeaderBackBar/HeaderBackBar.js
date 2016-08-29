@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {AppBar, IconButton, FontIcon} from 'material-ui'
 import {browserHistory} from 'react-router'
+import './style.scss'
 
 export default class HeaderBar extends React.Component{
     _backHistory(){
@@ -10,6 +11,7 @@ export default class HeaderBar extends React.Component{
         return (
             <div className="headerBackBar">
                 <AppBar
+                    className="appBar"
                     title="Detalhes"
                     iconElementLeft={
                         <IconButton onTouchTap={this._backHistory}>

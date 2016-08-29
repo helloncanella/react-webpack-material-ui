@@ -3,6 +3,7 @@ import {Tabs, Tab, FontIcon, AppBar} from 'material-ui'
 import InstructorsList from '../InstructorsList/InstructorsList';
 import ChatList from '../ChatList/ChatList'
 import ContactsList from '../ContactsList/ContactsList'
+import ScheduledList from '../ScheduledList/ScheduledList'
 
 export default class Home extends React.Component {
     render(){
@@ -29,7 +30,7 @@ export default class Home extends React.Component {
                         </Tabs>
                     </Tab>
                     <Tab icon={<FontIcon className="fa fa-calendar-o"></FontIcon>}>
-                        <h1>Como Lai?</h1>
+                        <ScheduledList />
                     </Tab>
                 </Tabs>
             </div>

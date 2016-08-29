@@ -7,7 +7,7 @@ import { Link } from 'react-router'
 export default class InstructorList extends React.Component{
   
     _renderedData(){
-      var DOM = instructorsData.map((instructor)=>{
+      var DOM = instructorsData.map((instructor, index)=>{
         
         let 
           profile = instructor.personalData.profile,
@@ -25,14 +25,14 @@ export default class InstructorList extends React.Component{
 
           
           return (
-            <Link to={`/client/01/instructorDetails/${instructorKey}`}>
+            <Link key = {index} to={`/client/01/instructorDetails/${instructorKey}`}>
               <ListItem 
-                key = {instructorKey}
+                key = {index}
                 leftAvatar={<Avatar src={image}></Avatar>}
                 primaryText={name}
                 secondaryText = {
                   <p>
-                    {lastDegree} pela {lastUniversity}<br />
+                    {lastDegree} | {lastUniversity}<br />
                     a partir de {chepeastPrice} por hora  
                   </p>                
                 }

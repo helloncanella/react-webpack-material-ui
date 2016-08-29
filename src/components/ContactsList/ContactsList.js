@@ -14,7 +14,7 @@ export default class ContactsList extends React.Component{
         return instructor.personalData.profile.name
       });
 
-      var DOM = instructors.map((user)=>{
+      var DOM = instructors.map((user, index)=>{
 
           let
             personal = user.personalData, 
@@ -27,9 +27,9 @@ export default class ContactsList extends React.Component{
             message = faker.lorem.text(10)
             
           return (
-            <Link to={``}>
+            <Link key = {index} to={`/client/01/chatComponent/01`}>
               <ListItem 
-                key = {id}
+                key = {index}
                 leftAvatar={<Avatar src={image}></Avatar>}
                 primaryText={name}
               />

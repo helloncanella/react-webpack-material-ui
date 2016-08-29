@@ -1,6 +1,6 @@
 import * as faker from 'faker'
 
-export function generateInstructor(quantity) {
+export default function generateInstructor(quantity) {
 
     var Instructors = []
 

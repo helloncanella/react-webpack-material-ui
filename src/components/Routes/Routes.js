@@ -9,16 +9,13 @@ import InstructorDetails from '../InstructorDetails/InstructorDetails'
 import PlanDetails from '../PlanDetails/PlanDetails'
 import HeaderBackBar from '../HeaderBackBar/HeaderBackBar'
 import MessageContainer from '../MessageContainer/MessageContainer'
-import newComponents from '../newComponents/newComponents'
- 
-export default class Routes extends React.Component { 
+import ChatComponent from '../ChatComponent/ChatComponent'
+
+export default class Routes extends React.Component {
   render() {
-    return ( 
+    return (
       <Router history={browserHistory}>
         <Route path="/" component={App}>
-           
-          <Route path="newComponents" component={newComponents}></Route>
-          
           <Route path="login" component={Login}></Route>
           <Route path="newUser" component={NewUser}></Route>
           <Route path="client/:id" >
@@ -26,9 +23,8 @@ export default class Routes extends React.Component {
             <Route component={HeaderBackBar}>
               <Route path="instructorDetails/:instructorId" component={InstructorDetails}></Route>
               <Route path="instructorDetails/:instructorId/plan/:planId" component={PlanDetails}></Route>
+              <Route path="chatComponent/:roomId" component={ChatComponent}></Route>
             </Route>
-            
-          
           </Route>
         </Route>
       </Router>

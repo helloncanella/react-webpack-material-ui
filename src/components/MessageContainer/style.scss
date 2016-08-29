@@ -1,52 +1,71 @@
-.allMessages{
-    &::after{
-        display:block;
-        clear: both;
-        content: '';
-    }
-}
+.chatComponent{
 
-.messageContainer {
-    width: 100%;
+    padding-bottom: 3%;
     
-    margin-bottom: 20px;
 
-
-    &::after{
-        display:block;
-        clear: both;
-        content: '';
-    }
-    
-    &.left{
-        &, &>*{
-            float: left;
+    .send{
+        .textField{
+            width: 75% !important
         }
 
-        .avatar{
-            margin-right: 10px;
-        }
-    }
-
-    &.right{
-        &, &>*{
+        .sendButton{
+            // padding-left: 2%;
             float: right;
-        }
-
-        .avatar{
-            margin-left: 10px;
+            margin-bottom: 10px;
         }
     }
 
 
-    .messages{
-        width: 60%;
-        max-width: 300px;
-        line-height: 1.45;
-        .paper{
-            margin-bottom: 5px;
-            padding: 10px;
+    .allMessages{
+        margin-top: 5.5rem;
+        margin-bottom: 3rem;
+        &::after{
+            display:block;
+            clear: both;
+            content: '';
         }
-    } 
+        .messageContainer {
+            width: 100%;            
+            margin-bottom: 20px;
+
+            &::after{
+                display:block;
+                clear: both;
+                content: '';
+            }
+            
+            &.left{
+                &, &>*{
+                    float: left;
+                }
+
+                .avatar{
+                    margin-right: 10px;
+                }
+            }
+
+            &.right{
+                &, &>*{
+                    float: right;
+                }
+
+                .avatar{
+                    margin-left: 10px;
+                }
+            }
+
+
+            .messages{
+                width: 60%;
+                max-width: 300px;
+                line-height: 1.45;
+                .paper{
+                    margin-bottom: 5px;
+                    padding: 10px;
+                }
+            } 
+
+        }
+    }
 
 }
